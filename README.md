@@ -105,6 +105,10 @@ Special thanks to [**John Aziz**](https://www.linkedin.com/in/john0isaac/) for c
 
 [**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) for making key contributions to each lesson to improve the learner and code experience. 
 
+---
+
+This fork is maintained by [Igor Vepretski](https://7ya.io) - Empowering the next generation of AI builders. Learn more at [7ya.io](https://7ya.io)
+
 ## 🎒 Other Courses
 
 Our team produces other courses! Check out:
