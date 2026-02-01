@@ -27,8 +27,13 @@ jobs:
               repo: context.repo.repo,
               body: `👋 Thanks for contributing @${ issueAuthor }! We will review the pull request and get back to you soon.`
             })
+      - name: Log PR Details
+        run: |
+          echo "Reviewers: ${{ github.event.pull_request.requested_reviewers }}"
+          echo "Assignees: ${{ github.event.pull_request.assignees }}"
       - name: Auto-assign issue
-        uses: pozil/auto-assign-issue@v2
+        uses: pozil/auto-assign-issue@v3
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: koreyspace
+          reviewers: koreyspace
