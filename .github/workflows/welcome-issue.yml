@@ -28,7 +28,16 @@ jobs:
               body: `👋 Thanks for contributing @${ issueAuthor }! We will review the issue and get back to you soon.`
             })
       - name: Auto-assign issue
-        uses: pozil/auto-assign-issue@v2
+        uses: actions/github-script@v6
         with:
-          repo-token:  ${{ secrets.GITHUB_TOKEN }}
-          assignees: koreyspace
+          script: |
+            const issueNumber = context.issue.number
+            const assignees = ['koreyspace']
+
+            // Add assignees
+            await github.rest.issues.addAssignees({
+              issue_number: issueNumber,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              assignees: assignees
+            })
