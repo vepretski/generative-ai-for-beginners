@@ -105,6 +105,8 @@ Special thanks to [**John Aziz**](https://www.linkedin.com/in/john0isaac/) for c
 
 [**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) for making key contributions to each lesson to improve the learner and code experience. 
 
+[**vepretski**](https://github.com/vepretski) for community contributions and support.
+
 ## 🎒 Other Courses
 
 Our team produces other courses! Check out:
