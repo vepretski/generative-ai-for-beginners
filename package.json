@@ -8,7 +8,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/microsoft/generative-ai-for-beginners.git"
+		"url": "git+https://github.com/vepretski/generative-ai-for-beginners.git"
 	},
 	"keywords": [
 		"generative",
@@ -18,9 +18,9 @@
 	"author": "Jim Bennett and team",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/microsoft/generative-ai-for-beginners/issues"
+		"url": "https://github.com/vepretski/generative-ai-for-beginners/issues"
 	},
-	"homepage": "https://github.com/microsoft/generative-ai-for-beginners#readme",
+	"homepage": "https://vepretski.github.io/generative-ai-for-beginners",
 	"devDependencies": {
 		"@types/node": "^24.3.0",
 		"docsify-to-pdf": "0.0.5"
