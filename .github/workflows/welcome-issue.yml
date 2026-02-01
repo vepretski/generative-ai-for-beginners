@@ -1,4 +1,4 @@
-name:  Welcome to the Microsoft Generative AI
+name: Welcome to the Microsoft Generative AI
 on:
   # Trigger the workflow on new issue
   issues:
@@ -28,7 +28,16 @@ jobs:
               body: `👋 Thanks for contributing @${ issueAuthor }! We will review the issue and get back to you soon.`
             })
       - name: Auto-assign issue
-        uses: pozil/auto-assign-issue@v2
+        uses: actions/github-script@v6
         with:
-          repo-token:  ${{ secrets.GITHUB_TOKEN }}
-          assignees: koreyspace
+          script: |
+            try {
+              await github.rest.issues.addAssignees({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                assignees: ['koreyspace']
+              })
+            } catch (error) {
+              console.log(`Failed to assign issue: ${error.message}`)
+            }
