@@ -154,7 +154,7 @@ def clean_text(text):
 def get_first_segment(file_name):
     """Gets the first segment from the filename"""
 
-    text = ""
+    text_parts = []
     current_seconds = None
     segment_begin_seconds = None
     segment_finish_seconds = None
@@ -176,9 +176,9 @@ def get_first_segment(file_name):
 
             if current_seconds < segment_finish_seconds:
                 # add the text to the transcript
-                text += clean_text(segment.get("text")) + " "
+                text_parts.append(clean_text(segment.get("text")))
 
-    return text
+    return " ".join(text_parts)
 
 
 def process_queue(progress, task):
@@ -206,10 +206,10 @@ def process_queue(progress, task):
                 print(f"From function call: {filename}\t{speakers}")
 
             metadata["speaker"] = speakers
-            json.dump(metadata, open(filename, "w", encoding="utf-8"))
+            with open(filename, "w", encoding="utf-8") as f:
+                json.dump(metadata, f)
 
         q.task_done()
-        time.sleep(0.2)
 
 
 logger.debug("Transcription folder %s", TRANSCRIPT_FOLDER)

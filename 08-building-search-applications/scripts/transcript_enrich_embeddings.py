@@ -119,7 +119,6 @@ def process_queue(progress, task):
         output_segments.append(segment.copy())
         progress.update(task, advance=1)
         q.task_done()
-        time.sleep(0.2)
 
 
 logger.debug("Total segments to be processed: %s", len(segments))
