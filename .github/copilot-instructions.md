@@ -159,7 +159,7 @@ Copy `.env.copy` to `.env` and configure:
 
 ### Supported Providers
 1. **Azure OpenAI Service** - Recommended for production, requires Azure subscription
-2. **GitHub Marketplace Model Catalog** - Free tier available for experimentation
+2. **GitHub Models** - Free tier available for experimentation
 3. **OpenAI API** - Direct OpenAI API access
 
 ### Common Model Parameters
@@ -222,10 +222,9 @@ Includes: Arabic, Bengali, Chinese (multiple variants), French, German, Hindi, J
 
 ## Special Notes for Copilot
 
-- This is a fork maintained by Igor Vepretski (7ya.io)
-- Original repository: microsoft/generative-ai-for-beginners
 - Focus on educational clarity over code efficiency
 - Preserve the beginner-friendly nature of examples
 - Maintain consistency across Python, TypeScript, and .NET versions
 - Respect the multi-language translation system
 - Follow the strict link formatting rules to pass CI checks
+- This repository may be a fork - check the repository metadata if needed
