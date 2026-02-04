@@ -227,4 +227,3 @@ Includes: Arabic, Bengali, Chinese (multiple variants), French, German, Hindi, J
 - Maintain consistency across Python, TypeScript, and .NET versions
 - Respect the multi-language translation system
 - Follow the strict link formatting rules to pass CI checks
-- This repository may be a fork - check the repository metadata if needed
