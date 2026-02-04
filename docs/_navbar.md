@@ -8,3 +8,4 @@
     * [Portuguese](/translations/pt/)
     * [Japanese](/translations/ja/)
     * [Korean](/translations/ko/)
+    * [Hebrew (עברית)](/translations/he/)
