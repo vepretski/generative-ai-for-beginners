@@ -47,8 +47,9 @@ except openai.InvalidRequestError as err:
 # ---creating variation below---
 
 
-response = client.images.create_variation(
-  image=open(image_path, "rb"),
-  n=1,
-  size="1024x1024"
-)
+with open(image_path, "rb") as image_file:
+    response = client.images.create_variation(
+      image=image_file,
+      n=1,
+      size="1024x1024"
+    )
