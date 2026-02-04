@@ -178,7 +178,7 @@ def get_first_segment(file_name):
                 # add the text to the transcript
                 text_parts.append(clean_text(segment.get("text")))
 
-    return " ".join(text_parts)
+    return " ".join(text_parts) + " " if text_parts else ""
 
 
 def process_queue(progress, task):
