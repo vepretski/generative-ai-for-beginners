@@ -187,9 +187,8 @@ Includes: Arabic, Bengali, Chinese (multiple variants), French, German, Hindi, J
 4. **Absolute Paths**: Use relative paths for repository links
 5. **Large Changes**: Keep PRs focused on single issues
 6. **Adding Test Infrastructure**: Don't add new testing tools unless required
-7. **Removing Working Tests**: Never remove existing tests
-8. **Production Patterns**: Keep code educational, not production-optimized
-9. **API Key Exposure**: Never commit API keys or secrets
+7. **Production Patterns**: Keep code educational, not production-optimized
+8. **API Key Exposure**: Never commit API keys or secrets
 
 ## Making Changes
 
