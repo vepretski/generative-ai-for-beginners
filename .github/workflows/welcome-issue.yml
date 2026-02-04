@@ -28,6 +28,8 @@ jobs:
               body: `👋 Thanks for contributing @${ issueAuthor }! We will review the issue and get back to you soon.`
             })
       - name: Auto-assign issue
+        # Only auto-assign in the microsoft/generative-ai-for-beginners repository, not in forks
+        if: github.repository == 'microsoft/generative-ai-for-beginners'
         uses: pozil/auto-assign-issue@v2
         with:
           repo-token:  ${{ secrets.GITHUB_TOKEN }}
