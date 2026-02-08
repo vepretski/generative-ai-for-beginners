@@ -26,9 +26,14 @@ jobs:
 
       - name: Check for LLM credentials
         id: check_credentials
+        env:
+          AZURE_OPENAI_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          OPENAI_KEY: ${{ secrets.OPENAI_API_KEY }}
+          AZURE_AI_KEY: ${{ secrets.AZURE_AI_SERVICE_API_KEY }}
         run: |
           # Check if at least one set of LLM credentials is configured
-          if [[ -n "${{ secrets.AZURE_OPENAI_API_KEY }}" || -n "${{ secrets.OPENAI_API_KEY }}" || -n "${{ secrets.AZURE_AI_SERVICE_API_KEY }}" ]]; then
+          # Using environment variables to avoid exposing secrets in logs
+          if [[ -n "$AZURE_OPENAI_KEY" || -n "$OPENAI_KEY" || -n "$AZURE_AI_KEY" ]]; then
             echo "credentials_available=true" >> $GITHUB_OUTPUT
           else
             echo "credentials_available=false" >> $GITHUB_OUTPUT
