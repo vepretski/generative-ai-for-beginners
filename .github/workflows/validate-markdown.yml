@@ -31,7 +31,7 @@ jobs:
         with:
           command: check_broken_paths
           directory: ./
-          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
+          guide-url: 'https://github.com/vepretski/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
           github-token: ${{ secrets.GITHUB_TOKEN }}
   check-paths-tracking:
     if: ${{ always() }}
@@ -49,7 +49,7 @@ jobs:
         with:
           command: check_paths_tracking
           directory: ./
-          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
+          guide-url: 'https://github.com/vepretski/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
           github-token: ${{ secrets.GITHUB_TOKEN }}
   check-urls-tracking:
     if: ${{ always() }}
@@ -67,7 +67,7 @@ jobs:
         with:
           command: check_urls_tracking
           directory: ./
-          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
+          guide-url: 'https://github.com/vepretski/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
           github-token: ${{ secrets.GITHUB_TOKEN }}
   check-urls-locale:
     if: ${{ always() }}
@@ -85,7 +85,7 @@ jobs:
         with:
           command: check_urls_locale
           directory: ./
-          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
+          guide-url: 'https://github.com/vepretski/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
           github-token: ${{ secrets.GITHUB_TOKEN }}
   check-broken-urls:
     if: ${{ always() }}
@@ -102,6 +102,6 @@ jobs:
         with:
           command: check_broken_urls
           directory: ./
-          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
+          guide-url: 'https://github.com/vepretski/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
