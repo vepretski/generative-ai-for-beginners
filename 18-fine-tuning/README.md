@@ -94,4 +94,4 @@ After completing this lesson, check out our [Generative AI Learning collection](
 
 Congratulations!! You have completed the final lesson from the v2 series for this course! Don't stop learning and building. \*\*Check out the [RESOURCES](RESOURCES.md?WT.mc_id=academic-105485-koreyst) page for a list of additional suggestions for just this topic.
 
-Our v1 series of lessons has also been updated with more assignments and concepts. So take a minute to refresh your knowledge - and please [share your questions and feedback](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) to help us improve these lessons for the community.
+Our v1 series of lessons has also been updated with more assignments and concepts. So take a minute to refresh your knowledge - and please [share your questions and feedback](https://github.com/vepretski/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) to help us improve these lessons for the community.

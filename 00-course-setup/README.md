@@ -10,7 +10,7 @@ To start taking this course, you will need to complete the following steps.
 
 ### 1. Fork this Repo
 
-[Fork this entire repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) to your own GitHub account to be able to change any code and complete the challenges. You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it and related repos easier.
+[Fork this entire repo](https://github.com/vepretski/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) to your own GitHub account to be able to change any code and complete the challenges. You can also [star (🌟) this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) to find it and related repos easier.
 
 ### 2. Create a codespace
 
@@ -95,7 +95,7 @@ To run the code locally on your computer, you would need to have some version of
 To then use the repository, you need to clone it:
 
 ```shell
-git clone https://github.com/microsoft/generative-ai-for-beginners
+git clone https://github.com/vepretski/generative-ai-for-beginners
 cd generative-ai-for-beginners
 ```
 
@@ -110,7 +110,7 @@ Conda itself is a package manager, that makes it easy to setup and switch betwee
 
 You can follow the [MiniConda installation guide](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) to set it up.
 
-With Miniconda installed, you need to clone the [repository](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (if you haven't already)
+With Miniconda installed, you need to clone the [repository](https://github.com/vepretski/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (if you haven't already)
 
 Next, you need to create a virtual environment. To do this with Conda, go ahead and create a new environment file (_environment.yml_). If you are following along using Codespaces, create this within the `.devcontainer` directory, thus `.devcontainer/environment.yml`.
 
@@ -210,7 +210,7 @@ The project team will also be on this Discord server to help any learners.
 
 ## Contribute
 
-This course is an open-source initiative. If you see areas of improvement or issues, please create a [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) or log a [GitHub issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
+This course is an open-source initiative. If you see areas of improvement or issues, please create a [Pull Request](https://github.com/vepretski/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) or log a [GitHub issue](https://github.com/vepretski/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
 
 The project team will be tracking all contributions. Contributing to open source is an amazing way to build your career in Generative AI.
 
