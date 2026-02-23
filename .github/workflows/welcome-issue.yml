@@ -31,5 +31,5 @@ jobs:
         uses: pozil/auto-assign-issue@v2
         continue-on-error: true
         with:
-          repo-token:  ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: koreyspace
