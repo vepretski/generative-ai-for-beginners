@@ -1,343 +1,180 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7YA.IO x STARTON | הצעה אסטרטגית לשיתוף פעולה</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Igor Vepretski | 7ya.io</title>
+  <meta name="description" content="עמוד פרימיום עבור איגור ופרצקי עם מיתוג אישי, הוכחת ביצועים וקריאה לפעולה עסקית." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+    }
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    body {
+      font-family: 'Heebo', sans-serif;
+      background: radial-gradient(circle at 10% 10%, #172554 0%, #0f172a 40%, #020617 100%);
+      min-height: 100vh;
+    }
 
-    <!-- Custom Styles -->
-    <style>
-        body { font-family: 'Heebo', sans-serif; background-color: #fafaf9; } /* stone-50 */
-        
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-            height: 300px;
-            max-height: 400px;
-            margin: 0 auto;
-        }
+    .glass {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+    }
 
-        .fade-in { animation: fadeIn 0.6s ease-out forwards; opacity: 0; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .glow {
+      box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.2), 0 0 40px rgba(37, 99, 235, 0.18);
+    }
 
-        .force-card {
-            transition: all 0.3s ease;
-        }
-        .force-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            right: -8px; 
-            top: 8px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: #ea580c; 
-            border: 3px solid #fff;
-        }
-        
-        /* Custom Scrollbar for sleek look */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
-    </style>
-    <!-- Chosen Palette: "Energetic & Playful" / "Warm Neutrals & Force Orange". Background: Stone-50. Accent: Orange-600 (#ea580c) for 7YA.IO, Blue-600 (#2563eb) for StartOn synergy. -->
-    
-    <!-- Application Structure Plan: 
-         1. Header: Unifies 7YA.IO and StartOn brands.
-         2. Executive Summary: The core "Pitch" in text form.
-         3. Value Proposition Grid: Interactive cards explaining the 3 pillars of synergy.
-         4. The Pilot Model (Timeline): Visualizing the 3-step process (Hook -> Shield -> Launch).
-         5. Impact Analysis (Charts): Quantifying the funnel from Reach to Success.
-         6. Footer: Call to Action.
-    -->
-    
-    <!-- Visualization & Content Choices:
-         - Doughnut Chart (Resilience Matrix): Shows the balance of soft/hard skills in the prep phase.
-         - Funnel Chart (Bar Chart): Demonstrates the filtering and refining process from raw social reach to qualified entrepreneurs.
-         - Timeline: CSS-based flow for the pilot stages.
-         - NO SVG/Mermaid.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.55s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .accent-text {
+      background: linear-gradient(120deg, #38bdf8, #22d3ee, #a78bfa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  </style>
 </head>
-<body class="text-stone-800 antialiased">
+<body class="text-slate-100 antialiased">
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-24 left-1/2 h-72 w-72 rounded-full bg-cyan-500/30 blur-3xl"></div>
+    <div class="absolute top-1/2 right-10 h-80 w-80 rounded-full bg-indigo-500/20 blur-3xl"></div>
+  </div>
 
-    <!-- App Wrapper -->
-    <div class="max-w-6xl mx-auto px-4 py-10 min-h-screen flex flex-col">
+  <div class="mx-auto max-w-6xl px-5 py-8 md:py-12">
+    <header class="glass glow sticky top-4 z-50 rounded-2xl px-5 py-4 md:px-7 md:py-5">
+      <nav class="flex flex-wrap items-center justify-between gap-4">
+        <a href="#" class="text-xl font-black tracking-tight">IGOR <span class="text-cyan-300">VEPRETSKI</span></a>
+        <div class="flex items-center gap-2 md:gap-3 text-sm md:text-base">
+          <a class="rounded-lg border border-slate-400/30 px-4 py-2 hover:border-cyan-300 hover:text-cyan-300 transition" href="https://github.com/vepretski" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="rounded-lg bg-cyan-400 px-4 py-2 font-bold text-slate-950 hover:bg-cyan-300 transition" href="https://7ya.io" target="_blank" rel="noreferrer">7ya.io</a>
+        </div>
+      </nav>
+    </header>
 
-        <!-- Header -->
-        <header class="text-center mb-16 fade-in" style="animation-delay: 0.1s;">
-            <div class="inline-flex items-center gap-3 mb-4 bg-white px-6 py-2 rounded-full shadow-sm border border-stone-100">
-                <span class="text-lg font-black tracking-tighter text-stone-900">7YA<span class="text-orange-600">.IO</span></span>
-                <span class="text-stone-300 font-light">|</span>
-                <span class="text-lg font-black tracking-tighter text-stone-900">STARTON<span class="text-blue-600">.ORG.IL</span></span>
-            </div>
-            <h1 class="text-4xl md:text-5xl font-black text-stone-900 mb-4 leading-tight">
-                הצעה לשיתוף פעולה אסטרטגי:<br><span class="text-transparent bg-clip-text bg-gradient-to-l from-orange-600 to-blue-600">מסלול המראה לנוער בסיכון</span>
-            </h1>
-            <p class="text-xl text-stone-500 font-medium max-w-2xl mx-auto">
-                חיבור בין Reach חברתי (310M) לתשתית יזמות מקצועית
+    <main class="mt-10 space-y-7 md:space-y-10">
+      <section class="fade-up glass glow rounded-3xl p-7 md:p-12">
+        <div class="grid gap-8 md:grid-cols-2 md:items-center">
+          <div>
+            <p class="mb-3 inline-flex items-center gap-2 rounded-full border border-cyan-300/40 bg-cyan-400/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-cyan-200">
+              founder • ai • growth
             </p>
-        </header>
-
-        <!-- Main Content Grid -->
-        <main class="flex-grow space-y-20">
-
-            <!-- Section 1: The Vision (Executive Summary) -->
-            <section class="fade-in" style="animation-delay: 0.2s;">
-                <div class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-stone-100 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-orange-500 to-blue-600"></div>
-                    <h2 class="text-2xl font-black text-stone-900 mb-4">תקציר המהלך</h2>
-                    <p class="text-lg text-stone-600 leading-relaxed max-w-4xl">
-                        אנו מציעים לחבר בין יכולת ההגעה (Reach) חסרת התקדים של 7YA.IO במדיה החברתית לבין התשתית המקצועית של סטארט-און. המטרה היא לייצר "מסלול המראה" מהיר לנוער בסיכון אל עבר עולם היזמות וההייטק, המשלב גיוס המונים ויראלי עם הכשרה מנטלית וטכנולוגית מעמיקה. זהו לא רק שיתוף פעולה, אלא יצירת <span class="font-bold text-stone-900">Force Multiplier</span> חברתי.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Section 2: The Synergy (Value Prop) -->
-            <section class="fade-in" style="animation-delay: 0.3s;">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl font-black text-stone-900">הערך המוסף של 7YA.IO</h2>
-                    <p class="text-stone-500 mt-2">למה החיבור הזה הוא Game Changer</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Recruitment Force -->
-                    <div class="force-card bg-white p-8 rounded-2xl border border-stone-100 text-center relative overflow-hidden group">
-                        <div class="absolute inset-0 bg-orange-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="relative z-10">
-                            <div class="w-16 h-16 mx-auto bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">📢</div>
-                            <h3 class="text-xl font-bold text-stone-900 mb-3">Recruitment Force</h3>
-                            <p class="text-stone-600 text-sm leading-relaxed mb-6">
-                                גישה ישירה ובלתי אמצעית לקהל ה-Hard-to-reach. אנחנו יודעים לגייס אותם מהטיקטוק והרחוב ולהפוך אותם ללומדים פעילים.
-                            </p>
-                            <div class="bg-white rounded-xl p-4 shadow-sm border border-stone-100">
-                                <span class="block text-3xl font-black text-stone-900">310M+</span>
-                                <span class="text-xs font-bold text-stone-400 uppercase">חשיפה במדיה</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Resilience Matrix -->
-                    <div class="force-card bg-white p-8 rounded-2xl border border-stone-100 text-center relative overflow-hidden group">
-                        <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="relative z-10 flex flex-col h-full">
-                            <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">🛡️</div>
-                            <h3 class="text-xl font-bold text-stone-900 mb-3">The Shield</h3>
-                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
-                                הכשרה מקדימה לבניית חוסן מנטלי ומשמעת עצמית, המכינה את הנוער לתוכניות של סטארט-און.
-                            </p>
-                            <div class="mt-auto chart-container" style="height: 140px; width: 140px;">
-                                <canvas id="resilienceChart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Media Impact -->
-                    <div class="force-card bg-white p-8 rounded-2xl border border-stone-100 text-center relative overflow-hidden group">
-                        <div class="absolute inset-0 bg-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="relative z-10">
-                            <div class="w-16 h-16 mx-auto bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">🚀</div>
-                            <h3 class="text-xl font-bold text-stone-900 mb-3">Media Impact</h3>
-                            <p class="text-stone-600 text-sm leading-relaxed mb-6">
-                                כל סיפור הצלחה בתוכנית הופך לתוכן ויראלי המקדם את המותג המשותף ומעלה מודעות ציבורית.
-                            </p>
-                            <div class="bg-white rounded-xl p-4 shadow-sm border border-stone-100 text-left">
-                                <div class="flex justify-between items-center text-xs font-bold text-stone-500 mb-2">
-                                    <span>פוטנציאל ויראלי</span>
-                                    <span>גבוה מאוד</span>
-                                </div>
-                                <div class="w-full bg-stone-200 h-2 rounded-full overflow-hidden">
-                                    <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 w-11/12 rounded-full"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 3: The Pilot Model (Timeline) -->
-            <section class="fade-in" style="animation-delay: 0.4s;">
-                <div class="bg-stone-900 text-white p-10 rounded-3xl relative overflow-hidden shadow-2xl">
-                    <div class="relative z-10">
-                        <div class="text-center mb-12">
-                            <span class="bg-stone-800 text-stone-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Roadmap</span>
-                            <h2 class="text-3xl md:text-4xl font-black mt-3">מודל הפיילוט (The Pilot)</h2>
-                        </div>
-                        
-                        <div class="max-w-3xl mx-auto border-r-2 border-stone-700 mr-4 space-y-16 pr-10">
-                            <!-- Step 1 -->
-                            <div class="timeline-item relative group">
-                                <span class="text-orange-500 text-sm font-black uppercase tracking-widest mb-1 block">שלב א'</span>
-                                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">The Hook: קמפיין גיוס</h3>
-                                <p class="text-stone-400 text-lg">קמפיין משותף במדיה של איגור המזמין נוער להגיש מועמדות ל"נבחרת ה-Force". שימוש בשפה ויזואלית חדה ומניעה לפעולה.</p>
-                            </div>
-                            <!-- Step 2 -->
-                            <div class="timeline-item relative group">
-                                <span class="text-blue-500 text-sm font-black uppercase tracking-widest mb-1 block">שלב ב'</span>
-                                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">The Shield: מחנה אימונים</h3>
-                                <p class="text-stone-400 text-lg">הכשרה אינטנסיבית של 4 שבועות ב-7YA.IO. מיקוד בחוסן מנטלי, משמעת וכלים דיגיטליים בסיסיים (Pre-Entrepreneurship).</p>
-                            </div>
-                            <!-- Step 3 -->
-                            <div class="timeline-item relative group">
-                                <span class="text-green-500 text-sm font-black uppercase tracking-widest mb-1 block">שלב ג'</span>
-                                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">The Launch: המראה לסטארט-און</h3>
-                                <p class="text-stone-400 text-lg">מעבר הבוגרים המצטיינים והמוכנים לחממות היזמות המקצועיות של סטארט-און, בליווי אישי של מנטור מ-7YA.IO.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Decor -->
-                    <div class="absolute top-0 left-0 w-96 h-96 bg-orange-600 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
-                    <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-600 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
-                </div>
-            </section>
-
-            <!-- Section 4: Impact Analysis (Chart) -->
-            <section class="fade-in" style="animation-delay: 0.5s;">
-                <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100 flex flex-col md:flex-row items-center gap-12">
-                    <div class="w-full md:w-5/12">
-                        <h2 class="text-3xl font-black text-stone-900 mb-4">משפך האימפקט</h2>
-                        <p class="text-stone-600 mb-6 leading-relaxed">
-                            הגרף ממחיש כיצד 7YA.IO מזרימה כמות אדירה של מתעניינים (Awareness) ומסננת אותם דרך תוכנית החוסן. התוצאה: סטארט-און מקבלת מועמדים איכותיים, רעבים ומוכנים ללמידה.
-                        </p>
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-3 bg-stone-50 p-3 rounded-lg">
-                                <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center font-bold">1</div>
-                                <div class="text-sm font-medium text-stone-700">חשיפה המונית (7YA.IO)</div>
-                            </div>
-                            <div class="flex items-center gap-3 bg-stone-50 p-3 rounded-lg">
-                                <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold">2</div>
-                                <div class="text-sm font-medium text-stone-700">סינון והכשרה (Shield)</div>
-                            </div>
-                            <div class="flex items-center gap-3 bg-stone-50 p-3 rounded-lg">
-                                <div class="w-10 h-10 bg-green-100 text-green-600 rounded-lg flex items-center justify-center font-bold">3</div>
-                                <div class="text-sm font-medium text-stone-700">יזמים צעירים (StartOn)</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-7/12 chart-container">
-                        <canvas id="funnelChart"></canvas>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- Footer -->
-        <footer class="mt-20 border-t border-stone-200 pt-10 text-center fade-in" style="animation-delay: 0.6s;">
-            <h3 class="text-3xl font-black text-stone-900 mb-3">בואו נהפוך את הכוח של המדיה לכוח של שינוי.</h3>
-            <p class="text-stone-500 mb-8 font-medium">אנחנו לא מחפשים רק "מימון", אלא שותפות לדרך.</p>
-            <div class="inline-flex gap-4">
-                <button class="bg-stone-900 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-orange-600 transition-all transform hover:-translate-y-1">
-                    תיאום פגישת היכרות
-                </button>
+            <h1 class="text-4xl font-black leading-tight md:text-6xl">
+              לקחת רעיון <span class="accent-text">ל-Pro Level</span>
+            </h1>
+            <p class="mt-5 max-w-xl text-lg text-slate-300 md:text-xl">
+              בונה מותגים, מוצרים וקהילות שיודעים לייצר אימפקט עסקי אמיתי. אסטרטגיה חדה, ביצוע מהיר ותוצאות שאי אפשר להתעלם מהן.
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a href="https://7ya.io" target="_blank" rel="noreferrer" class="rounded-xl bg-cyan-400 px-6 py-3 text-base font-bold text-slate-950 hover:bg-cyan-300 transition">Visit 7ya.io</a>
+              <a href="https://github.com/vepretski" target="_blank" rel="noreferrer" class="rounded-xl border border-slate-400/40 px-6 py-3 text-base font-bold hover:border-cyan-300 hover:text-cyan-300 transition">View GitHub</a>
             </div>
-            <p class="mt-12 text-stone-400 text-sm">© 2026 איגור ופרצקי | 7YA.IO</p>
-        </footer>
+          </div>
 
-    </div>
+          <div class="grid gap-4">
+            <article class="rounded-2xl border border-slate-400/20 bg-slate-900/70 p-5">
+              <p class="text-sm text-slate-400">מיקוד</p>
+              <p class="mt-1 text-2xl font-black">AI-First Business Systems</p>
+            </article>
+            <article class="rounded-2xl border border-slate-400/20 bg-slate-900/70 p-5">
+              <p class="text-sm text-slate-400">גישה</p>
+              <p class="mt-1 text-2xl font-black">Speed + Precision + Story</p>
+            </article>
+            <article class="rounded-2xl border border-slate-400/20 bg-slate-900/70 p-5">
+              <p class="text-sm text-slate-400">יעד</p>
+              <p class="mt-1 text-2xl font-black">Scale Impact, Not Noise</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <!-- Scripts -->
-    <script>
-        // Chart.js Configuration
-        
-        // 1. Resilience Doughnut Chart (Small visual for the card)
-        const ctxResilience = document.getElementById('resilienceChart').getContext('2d');
-        new Chart(ctxResilience, {
-            type: 'doughnut',
-            data: {
-                labels: ['חוסן מנטלי', 'כישורים טכניים'],
-                datasets: [{
-                    data: [65, 35],
-                    backgroundColor: ['#ea580c', '#eff6ff'], // Orange vs Light Blue
-                    borderWidth: 0,
-                    hoverOffset: 4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: { enabled: false }
-                },
-                cutout: '75%'
-            }
-        });
+      <section class="fade-up grid gap-4 md:grid-cols-3">
+        <div class="glass rounded-2xl p-6">
+          <p class="text-sm text-slate-400">Brand Positioning</p>
+          <p class="mt-3 text-3xl font-black">Premium</p>
+          <p class="mt-2 text-slate-300">מיתוג חד שמייצר זכירות וסמכות בשוק תחרותי.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <p class="text-sm text-slate-400">Product Velocity</p>
+          <p class="mt-3 text-3xl font-black">Fast Launch</p>
+          <p class="mt-2 text-slate-300">מהאסטרטגיה לפריסה בזמן קצר עם איכות גבוהה.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <p class="text-sm text-slate-400">Community Engine</p>
+          <p class="mt-3 text-3xl font-black">Authentic Reach</p>
+          <p class="mt-2 text-slate-300">תוכן ואקוסיסטם שבונים אמון לאורך זמן.</p>
+        </div>
+      </section>
 
-        // 2. Funnel Bar Chart (Main visual)
-        const ctxFunnel = document.getElementById('funnelChart').getContext('2d');
-        
-        // Helper to handle long labels if necessary (standard chart.js practice)
-        const formatLabel = (str) => str.split(' ');
+      <section class="fade-up glass rounded-3xl p-7 md:p-10">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 class="text-3xl font-black md:text-4xl">למה זה עובד</h2>
+            <p class="mt-3 max-w-2xl text-slate-300">השילוב בין נרטיב מדויק, תשתיות AI ותהליכי עבודה חכמים מאפשר לעלות רמה מהר — בלי להתפשר על סטנדרט.</p>
+          </div>
+        </div>
+        <div class="mt-7 grid gap-4 md:grid-cols-3">
+          <div class="rounded-2xl border border-slate-400/20 bg-slate-900/60 p-5">
+            <p class="text-sm text-cyan-300">01</p>
+            <h3 class="mt-2 text-xl font-bold">Strategy Sprint</h3>
+            <p class="mt-2 text-slate-300">הגדרת הצעת ערך, קהל יעד ומפת KPI עסקית.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-400/20 bg-slate-900/60 p-5">
+            <p class="text-sm text-cyan-300">02</p>
+            <h3 class="mt-2 text-xl font-bold">Build & Launch</h3>
+            <p class="mt-2 text-slate-300">בניית נכס דיגיטלי חזק עם חווית משתמש ברמה גבוהה.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-400/20 bg-slate-900/60 p-5">
+            <p class="text-sm text-cyan-300">03</p>
+            <h3 class="mt-2 text-xl font-bold">Scale & Optimize</h3>
+            <p class="mt-2 text-slate-300">אוטומציות, מדידה ושיפור מתמיד לצמיחה יציבה.</p>
+          </div>
+        </div>
+      </section>
 
-        new Chart(ctxFunnel, {
-            type: 'bar',
-            data: {
-                labels: ['חשיפה (7YA.IO Reach)', 'פניות (Leads)', 'הכשרה (The Shield)', 'בוגרים לסטארט-און'],
-                datasets: [{
-                    label: 'מספר משתתפים (משוער)',
-                    data: [50000, 2500, 400, 80], // Funnel logic numbers
-                    backgroundColor: [
-                        '#ea580c', // Orange-600 (High volume)
-                        '#f97316', // Orange-500
-                        '#3b82f6', // Blue-500 (Training)
-                        '#22c55e'  // Green-500 (Success)
-                    ],
-                    borderRadius: 12,
-                    barPercentage: 0.6
-                }]
-            },
-            options: {
-                indexAxis: 'y', // Horizontal funnel view
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: { display: false }
-                    },
-                    y: {
-                        grid: { display: false },
-                        ticks: { 
-                            font: { family: 'Heebo', weight: 'bold', size: 14 },
-                            color: '#44403c'
-                        }
-                    }
-                },
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1c1917',
-                        padding: 12,
-                        titleFont: { family: 'Heebo', size: 14 },
-                        bodyFont: { family: 'Heebo', size: 14 },
-                        callbacks: {
-                            title: function(tooltipItems) {
-                                let label = tooltipItems[0].label;
-                                return Array.isArray(label) ? label.join(' ') : label;
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    </script>
+      <section class="fade-up rounded-3xl border border-cyan-300/30 bg-gradient-to-l from-cyan-400/20 to-indigo-500/20 p-7 md:p-10">
+        <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-cyan-200">ready to build?</p>
+            <h2 class="mt-2 text-3xl font-black md:text-4xl">בואו נבנה את הגרסה החזקה ביותר שלכם.</h2>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://7ya.io" target="_blank" rel="noreferrer" class="rounded-xl bg-cyan-400 px-6 py-3 text-base font-black text-slate-950 hover:bg-cyan-300 transition">Start on 7ya.io</a>
+            <a href="https://github.com/vepretski" target="_blank" rel="noreferrer" class="rounded-xl border border-slate-200/40 px-6 py-3 text-base font-black hover:border-cyan-300 hover:text-cyan-300 transition">Explore Code</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-10 px-1 pb-4 text-center text-sm text-slate-400">
+      © 2026 Igor Vepretski · Built for high-performance digital presence.
+    </footer>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+  </script>
 </body>
 </html>
