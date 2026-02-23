@@ -2,6 +2,9 @@
 
 ### 21 Lessons teaching everything you need to know to start building Generative AI applications
 
+> **🚀 This fork is maintained by [7YA.IO](https://7ya.io) - Empowering the next generation of AI builders**  
+> **📖 [Learn more about our mission and programs](./7YA-IO.md)**
+
 [![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
 [![GitHub issues](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst)
@@ -111,6 +114,8 @@ Special thanks to [**John Aziz**](https://www.linkedin.com/in/john0isaac/) for c
 
 This fork is proudly maintained by [**Igor Vepretski**](https://7ya.io) through **[7YA.IO](https://7ya.io)** - A platform dedicated to **empowering the next generation of AI builders**.
 
+**👉 [Learn more about 7YA.IO and our mission](./7YA-IO.md)**
+
 ### 🎯 Our Mission
 **7YA.IO** focuses on making AI education accessible to everyone, especially underserved communities and aspiring developers. We believe in:
 - **Breaking barriers** to AI education and technology
@@ -130,6 +135,7 @@ Ready to level up your AI skills?
 - ⭐ Star this repository to stay updated
 - 🔗 Connect with [Igor Vepretski](https://7ya.io) on social media
 - 📧 Reach out for collaboration opportunities
+- 📄 Read our [full story and vision](./7YA-IO.md)
 
 **Together, we're building the future of AI education!**
 
