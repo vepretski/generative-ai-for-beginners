@@ -1,0 +1,57 @@
+body { font-family: 'Heebo', sans-serif; background-color: #fafaf9; }
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+.chart-size-sm {
+    height: 140px;
+    width: 140px;
+}
+
+.fade-in { animation: fadeIn 0.6s ease-out forwards; opacity: 0; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-in { animation: none; opacity: 1; }
+    .force-card,
+    .force-card:hover { transition: none; transform: none; }
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+
+.force-card {
+    transition: all 0.3s ease;
+}
+.force-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    right: -8px; 
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ea580c; 
+    border: 3px solid #fff;
+}
+
+/* Custom Scrollbar for sleek look */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #9ca3af; }

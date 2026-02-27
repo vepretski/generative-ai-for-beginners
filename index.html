@@ -13,6 +13,16 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://7ya.io/">
     <meta property="og:locale" content="he_IL">
+    <meta property="og:image" content="https://7ya.io/images/og-7ya-starton.png">
+    <meta property="og:site_name" content="7YA.IO">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="7YA.IO x STARTON | הצעה לשיתוף פעולה אסטרטגי">
+    <meta name="twitter:description" content="חיבור בין Reach חברתי אדיר להכשרה יזמית ומקצועית לנוער בסיכון.">
+    <meta name="twitter:image" content="https://7ya.io/images/og-7ya-starton.png">
+    <meta name="theme-color" content="#ea580c">
+    <meta name="application-name" content="7YA.IO">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.tailwindcss.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com data:; script-src 'self' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; base-uri 'self'; form-action 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,56 +31,26 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/icon-192.png">
+    <link rel="manifest" href="/manifest.json">
 
-    <!-- Custom Styles -->
-    <style>
-        body { font-family: 'Heebo', sans-serif; background-color: #fafaf9; } /* stone-50 */
-        
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-            height: 300px;
-            max-height: 400px;
-            margin: 0 auto;
-        }
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "7YA.IO",
+        "url": "https://7ya.io/",
+        "logo": "https://7ya.io/images/icons/icon-192.png",
+        "description": "7YA.IO x STARTON | מסלול המראה לנוער בסיכון",
+        "sameAs": ["https://7ya.io", "https://starton.org.il"]
+    }
+    </script>
 
-        .fade-in { animation: fadeIn 0.6s ease-out forwards; opacity: 0; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
-        @media (prefers-reduced-motion: reduce) {
-            .fade-in { animation: none; opacity: 1; }
-            .force-card,
-            .force-card:hover { transition: none; transform: none; }
-        }
-
-        .force-card {
-            transition: all 0.3s ease;
-        }
-        .force-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            right: -8px; 
-            top: 8px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: #ea580c; 
-            border: 3px solid #fff;
-        }
-        
-        /* Custom Scrollbar for sleek look */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
-    </style>
     <!-- Chosen Palette: "Energetic & Playful" / "Warm Neutrals & Force Orange". Background: Stone-50. Accent: Orange-600 (#ea580c) for 7YA.IO, Blue-600 (#2563eb) for StartOn synergy. -->
     
     <!-- Application Structure Plan: 
@@ -96,7 +76,7 @@
     <div class="max-w-6xl mx-auto px-4 py-10 min-h-screen flex flex-col">
 
         <!-- Header -->
-        <header class="text-center mb-16 fade-in" style="animation-delay: 0.1s;">
+        <header class="text-center mb-16 fade-in delay-1">
             <div class="inline-flex items-center gap-3 mb-4 bg-white px-6 py-2 rounded-full shadow-sm border border-stone-100">
                 <span class="text-lg font-black tracking-tighter text-stone-900">7YA<span class="text-orange-600">.IO</span></span>
                 <span class="text-stone-300 font-light">|</span>
@@ -109,8 +89,8 @@
                 חיבור בין Reach חברתי (310M) לתשתית יזמות מקצועית
             </p>
             <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm">
-                <a href="https://7ya.io" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-orange-50 text-orange-700 font-bold border border-orange-200 hover:bg-orange-100 transition-colors">7YA.IO</a>
-                <a href="https://igor-vepretski-7-ya.replit.app/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-bold border border-blue-200 hover:bg-blue-100 transition-colors">Replit App</a>
+                <a href="https://7ya.io" target="_blank" rel="noopener noreferrer" aria-label="פתיחת אתר 7YA.IO בלשונית חדשה" class="px-4 py-2 rounded-full bg-orange-50 text-orange-700 font-bold border border-orange-200 hover:bg-orange-100 transition-colors">7YA.IO</a>
+                <a href="https://igor-vepretski-7-ya.replit.app/" target="_blank" rel="noopener noreferrer" aria-label="פתיחת אפליקציית ההדגמה ב-Replit" class="px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-bold border border-blue-200 hover:bg-blue-100 transition-colors">Replit App</a>
             </div>
         </header>
 
@@ -118,7 +98,7 @@
         <main class="flex-grow space-y-20">
 
             <!-- Section 1: The Vision (Executive Summary) -->
-            <section class="fade-in" style="animation-delay: 0.2s;">
+            <section class="fade-in delay-2">
                 <div class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-stone-100 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-orange-500 to-blue-600"></div>
                     <h2 class="text-2xl font-black text-stone-900 mb-4">תקציר המהלך</h2>
@@ -129,7 +109,7 @@
             </section>
 
             <!-- Section 2: The Synergy (Value Prop) -->
-            <section class="fade-in" style="animation-delay: 0.3s;">
+            <section class="fade-in delay-3">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl font-black text-stone-900">הערך המוסף של 7YA.IO</h2>
                     <p class="text-stone-500 mt-2">למה החיבור הזה הוא Game Changer</p>
@@ -140,7 +120,7 @@
                     <div class="force-card bg-white p-8 rounded-2xl border border-stone-100 text-center relative overflow-hidden group">
                         <div class="absolute inset-0 bg-orange-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="relative z-10">
-                            <div class="w-16 h-16 mx-auto bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">📢</div>
+                            <div class="w-16 h-16 mx-auto bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm" aria-hidden="true" role="presentation">📢</div>
                             <h3 class="text-xl font-bold text-stone-900 mb-3">Recruitment Force</h3>
                             <p class="text-stone-600 text-sm leading-relaxed mb-6">
                                 גישה ישירה ובלתי אמצעית לקהל ה-Hard-to-reach. אנחנו יודעים לגייס אותם מהטיקטוק והרחוב ולהפוך אותם ללומדים פעילים.
@@ -156,12 +136,12 @@
                     <div class="force-card bg-white p-8 rounded-2xl border border-stone-100 text-center relative overflow-hidden group">
                         <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="relative z-10 flex flex-col h-full">
-                            <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">🛡️</div>
+                            <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm" aria-hidden="true" role="presentation">🛡️</div>
                             <h3 class="text-xl font-bold text-stone-900 mb-3">The Shield</h3>
                             <p class="text-stone-600 text-sm leading-relaxed mb-4">
                                 הכשרה מקדימה לבניית חוסן מנטלי ומשמעת עצמית, המכינה את הנוער לתוכניות של סטארט-און.
                             </p>
-                            <div class="mt-auto chart-container" style="height: 140px; width: 140px;">
+                            <div class="mt-auto chart-container chart-size-sm">
                                 <canvas id="resilienceChart" role="img" aria-label="תרשים דונאט המציג חלוקה בין חוסן מנטלי לכישורים טכניים"></canvas>
                             </div>
                         </div>
@@ -171,7 +151,7 @@
                     <div class="force-card bg-white p-8 rounded-2xl border border-stone-100 text-center relative overflow-hidden group">
                         <div class="absolute inset-0 bg-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="relative z-10">
-                            <div class="w-16 h-16 mx-auto bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">🚀</div>
+                            <div class="w-16 h-16 mx-auto bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm" aria-hidden="true" role="presentation">🚀</div>
                             <h3 class="text-xl font-bold text-stone-900 mb-3">Media Impact</h3>
                             <p class="text-stone-600 text-sm leading-relaxed mb-6">
                                 כל סיפור הצלחה בתוכנית הופך לתוכן ויראלי המקדם את המותג המשותף ומעלה מודעות ציבורית.
@@ -191,7 +171,7 @@
             </section>
 
             <!-- Section 3: The Pilot Model (Timeline) -->
-            <section class="fade-in" style="animation-delay: 0.4s;">
+            <section class="fade-in delay-4">
                 <div class="bg-stone-900 text-white p-10 rounded-3xl relative overflow-hidden shadow-2xl">
                     <div class="relative z-10">
                         <div class="text-center mb-12">
@@ -228,7 +208,7 @@
             </section>
 
             <!-- Section 4: Impact Analysis (Chart) -->
-            <section class="fade-in" style="animation-delay: 0.5s;">
+            <section class="fade-in delay-5">
                 <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100 flex flex-col md:flex-row items-center gap-12">
                     <div class="w-full md:w-5/12">
                         <h2 class="text-3xl font-black text-stone-900 mb-4">משפך האימפקט</h2>
@@ -259,14 +239,14 @@
         </main>
 
         <!-- Footer -->
-        <footer class="mt-20 border-t border-stone-200 pt-10 text-center fade-in" style="animation-delay: 0.6s;">
+        <footer class="mt-20 border-t border-stone-200 pt-10 text-center fade-in delay-6">
             <h3 class="text-3xl font-black text-stone-900 mb-3">בואו נהפוך את הכוח של המדיה לכוח של שינוי.</h3>
             <p class="text-stone-500 mb-8 font-medium">אנחנו לא מחפשים רק "מימון", אלא שותפות לדרך.</p>
             <div class="inline-flex flex-wrap justify-center gap-4">
-                <a href="mailto:hello@7ya.io?subject=%D7%A9%D7%99%D7%AA%D7%95%D7%A3%20%D7%A4%D7%A2%D7%95%D7%9C%D7%94%207YA.IO%20x%20STARTON" class="bg-stone-900 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-orange-600 transition-all transform hover:-translate-y-1">
+                <a href="mailto:hello@7ya.io?subject=%D7%A9%D7%99%D7%AA%D7%95%D7%A3%20%D7%A4%D7%A2%D7%95%D7%9C%D7%94%207YA.IO%20x%20STARTON" aria-label="שליחת דוא״ל ל-hello@7ya.io" class="bg-stone-900 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-orange-600 transition-all transform hover:-translate-y-1">
                     תיאום פגישת היכרות
                 </a>
-                <a href="https://igor-vepretski-7-ya.replit.app/" target="_blank" rel="noopener noreferrer" class="bg-white text-stone-900 px-8 py-4 rounded-xl font-bold shadow-sm border border-stone-200 hover:border-blue-500 hover:text-blue-700 transition-all">
+                <a href="https://igor-vepretski-7-ya.replit.app/" target="_blank" rel="noopener noreferrer" aria-label="צפייה בגרסה החיה ב-Replit" class="bg-white text-stone-900 px-8 py-4 rounded-xl font-bold shadow-sm border border-stone-200 hover:border-blue-500 hover:text-blue-700 transition-all">
                     צפייה בגרסה החיה
                 </a>
             </div>
@@ -276,93 +256,6 @@
     </div>
 
     <!-- Scripts -->
-    <script>
-        // Chart.js Configuration
-        
-        // 1. Resilience Doughnut Chart (Small visual for the card)
-        const resilienceCanvas = document.getElementById('resilienceChart');
-        if (resilienceCanvas) {
-            const ctxResilience = resilienceCanvas.getContext('2d');
-            new Chart(ctxResilience, {
-            type: 'doughnut',
-            data: {
-                labels: ['חוסן מנטלי', 'כישורים טכניים'],
-                datasets: [{
-                    data: [65, 35],
-                    backgroundColor: ['#ea580c', '#eff6ff'], // Orange vs Light Blue
-                    borderWidth: 0,
-                    hoverOffset: 4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: { enabled: false }
-                },
-                cutout: '75%'
-            }
-        });
-        }
-
-        // 2. Funnel Bar Chart (Main visual)
-        const funnelCanvas = document.getElementById('funnelChart');
-        if (funnelCanvas) {
-        const ctxFunnel = funnelCanvas.getContext('2d');
-        
-        new Chart(ctxFunnel, {
-            type: 'bar',
-            data: {
-                labels: ['חשיפה (7YA.IO Reach)', 'פניות (Leads)', 'הכשרה (The Shield)', 'בוגרים לסטארט-און'],
-                datasets: [{
-                    label: 'מספר משתתפים (משוער)',
-                    data: [50000, 2500, 400, 80], // Funnel logic numbers
-                    backgroundColor: [
-                        '#ea580c', // Orange-600 (High volume)
-                        '#f97316', // Orange-500
-                        '#3b82f6', // Blue-500 (Training)
-                        '#22c55e'  // Green-500 (Success)
-                    ],
-                    borderRadius: 12,
-                    barPercentage: 0.6
-                }]
-            },
-            options: {
-                indexAxis: 'y', // Horizontal funnel view
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: { display: false }
-                    },
-                    y: {
-                        grid: { display: false },
-                        ticks: { 
-                            font: { family: 'Heebo', weight: 'bold', size: 14 },
-                            color: '#44403c'
-                        }
-                    }
-                },
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1c1917',
-                        padding: 12,
-                        titleFont: { family: 'Heebo', size: 14 },
-                        bodyFont: { family: 'Heebo', size: 14 },
-                        callbacks: {
-                            title: function(tooltipItems) {
-                                let label = tooltipItems[0].label;
-                                return Array.isArray(label) ? label.join(' ') : label;
-                            }
-                        }
-                    }
-                }
-            }
-        });
-        }
-    </script>
+    <script type="module" src="/scripts/charts.js"></script>
 </body>
 </html>
