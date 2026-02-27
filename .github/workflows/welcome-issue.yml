@@ -29,6 +29,7 @@ jobs:
             })
       - name: Auto-assign issue
         uses: pozil/auto-assign-issue@v2
+        if: github.repository == 'microsoft/generative-ai-for-beginners'
         with:
           repo-token:  ${{ secrets.GITHUB_TOKEN }}
           assignees: koreyspace
