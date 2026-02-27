@@ -4,16 +4,14 @@
       <stop offset="0%" style="stop-color:#fafaf9;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#f5f5f4;stop-opacity:1" />
     </linearGradient>
-  </defs>
-  <rect width="1200" height="630" fill="url(#bgGrad)"/>
-  
-  <!-- Orange to Blue Gradient Bar -->
-  <defs>
     <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#ea580c;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
     </linearGradient>
   </defs>
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  
+  <!-- Orange to Blue Gradient Bar -->
   <rect x="0" y="0" width="1200" height="8" fill="url(#brandGrad)"/>
   
   <!-- Main Text -->
