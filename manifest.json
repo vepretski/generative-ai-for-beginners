@@ -1,0 +1,20 @@
+{
+  "name": "7YA.IO x STARTON | מסלול המראה לנוער בסיכון",
+  "short_name": "7YA.IO",
+  "description": "7YA.IO x STARTON - מהלך אסטרטגי לחיבור בין חשיפה דיגיטלית עצומה, הכשרת נוער בסיכון ותוכנית האצה יזמית מקצועית",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafaf9",
+  "theme_color": "#ea580c",
+  "orientation": "portrait",
+  "lang": "he",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
