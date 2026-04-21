@@ -205,6 +205,13 @@ class WorkflowProductModule:
             )
         )
 
+    def get_sop_run_totals(self) -> dict[str, int]:
+        """Return total execution counts grouped by SOP id."""
+        totals: dict[str, int] = {}
+        for log in self.logs:
+            totals[log.sop_id] = totals.get(log.sop_id, 0) + 1
+        return totals
+
     def build_igor_assistant_brief(
         self,
         *,
@@ -273,12 +280,43 @@ class WorkflowProductModule:
     def dashboard_html(self) -> str:
         """Return a basic dashboard HTML for quick product demo."""
         metrics = self.get_metrics()
+        sop_totals = self.get_sop_run_totals()
+        max_runs = max(sop_totals.values(), default=1)
+        bars = "".join(
+            [
+                (
+                    "<div class='bar-row'>"
+                    f"<span class='bar-label'>{sop_id}</span>"
+                    f"<div class='bar-track'><div class='bar-fill' style='width:{(count / max_runs) * 100:.1f}%'></div></div>"
+                    f"<span class='bar-value'>{count}</span>"
+                    "</div>"
+                )
+                for sop_id, count in sorted(sop_totals.items())
+            ]
+        ) or "<p class='empty-state'>No runs yet. Execute agents to populate chart metrics.</p>"
         return f"""
 <!doctype html>
 <html lang=\"en\">
-  <head><meta charset=\"utf-8\"><title>7ya Workflow Module</title></head>
+  <head>
+    <meta charset=\"utf-8\">
+    <title>7ya Workflow Module</title>
+    <style>
+      body {{ font-family: Arial, sans-serif; margin: 24px; line-height: 1.4; }}
+      .chart-card {{ border: 1px solid #d9e2f2; border-radius: 10px; padding: 16px; margin-bottom: 20px; background: #f8fbff; }}
+      .bar-row {{ display: grid; grid-template-columns: minmax(180px, 240px) 1fr 40px; gap: 10px; align-items: center; margin-bottom: 10px; }}
+      .bar-track {{ background: #e9effa; border-radius: 8px; height: 18px; overflow: hidden; }}
+      .bar-fill {{ background: linear-gradient(90deg, #2d6cdf, #41b0ff); height: 100%; }}
+      .bar-label {{ font-size: 13px; color: #1c2a4a; word-break: break-word; }}
+      .bar-value {{ text-align: right; color: #1c2a4a; font-weight: 700; }}
+      .empty-state {{ color: #56607a; margin: 0; }}
+    </style>
+  </head>
   <body>
     <h1>7ya.io Workflow Product Module</h1>
+    <div class=\"chart-card\">
+      <h2>SOP Activity (Bar Chart)</h2>
+      {bars}
+    </div>
     <h2>KPIs</h2>
     <ul>
       <li>Total tasks: {metrics['total_tasks']}</li>
