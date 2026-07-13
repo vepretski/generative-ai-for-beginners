@@ -4,6 +4,7 @@
 	"description": "Generative AI for Beginners - A Curriculum",
 	"main": "index.js",
 	"scripts": {
+		"build": "node scripts/build-site.mjs",
 		"convert": "node_modules/.bin/docsify-to-pdf"
 	},
 	"repository": {
