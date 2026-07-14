@@ -5,6 +5,7 @@ on:
     types: [opened]
 permissions:
   contents: read
+  issues: write
   pull-requests: write
 jobs:
   assess-pull-request:
@@ -27,8 +28,17 @@ jobs:
               repo: context.repo.repo,
               body: `👋 Thanks for contributing @${ issueAuthor }! We will review the pull request and get back to you soon.`
             })
-      - name: Auto-assign issue
-        uses: pozil/auto-assign-issue@v2
+      - name: Auto-assign pull request
+        uses: actions/github-script@v6
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          assignees: koreyspace
+          script: |
+            try {
+              await github.rest.issues.addAssignees({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                assignees: ['koreyspace']
+              })
+            } catch (error) {
+              console.log(`Failed to assign pull request: ${error.message}`)
+            }
