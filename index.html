@@ -13,6 +13,30 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://7ya.io/">
     <meta property="og:locale" content="he_IL">
+    <meta property="og:image" content="https://7ya.io/og-image.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/svg+xml">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="7YA.IO x STARTON | מסלול המראה לנוער בסיכון">
+    <meta name="twitter:description" content="מודל שיתוף פעולה מעשי שמחבר Reach חברתי עם הכשרה מנטלית-טכנולוגית ויזמות.">
+    <meta name="twitter:image" content="https://7ya.io/og-image.svg">
+    
+    <!-- Theme and PWA -->
+    <meta name="theme-color" content="#ea580c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -89,6 +113,23 @@
          - NO SVG/Mermaid.
     -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "7YA.IO x STARTON",
+      "url": "https://7ya.io",
+      "description": "מהלך אסטרטגי לחיבור בין חשיפה דיגיטלית עצומה, הכשרת נוער בסיכון ותוכנית האצה יזמית מקצועית",
+      "foundingDate": "2026",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@7ya.io",
+        "contactType": "Customer Service"
+      }
+    }
+    </script>
 </head>
 <body class="text-stone-800 antialiased">
 
@@ -109,8 +150,8 @@
                 חיבור בין Reach חברתי (310M) לתשתית יזמות מקצועית
             </p>
             <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm">
-                <a href="https://7ya.io" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-orange-50 text-orange-700 font-bold border border-orange-200 hover:bg-orange-100 transition-colors">7YA.IO</a>
-                <a href="https://igor-vepretski-7-ya.replit.app/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-bold border border-blue-200 hover:bg-blue-100 transition-colors">Replit App</a>
+                <a href="https://7ya.io" target="_blank" rel="noopener noreferrer" aria-label="7YA.IO (נפתח בחלון חדש)" class="px-4 py-2 rounded-full bg-orange-50 text-orange-700 font-bold border border-orange-200 hover:bg-orange-100 transition-colors">7YA.IO</a>
+                <a href="https://igor-vepretski-7-ya.replit.app/" target="_blank" rel="noopener noreferrer" aria-label="Replit App (נפתח בחלון חדש)" class="px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-bold border border-blue-200 hover:bg-blue-100 transition-colors">Replit App</a>
             </div>
         </header>
 
@@ -140,7 +181,7 @@
                     <div class="force-card bg-white p-8 rounded-2xl border border-stone-100 text-center relative overflow-hidden group">
                         <div class="absolute inset-0 bg-orange-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="relative z-10">
-                            <div class="w-16 h-16 mx-auto bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">📢</div>
+                            <div class="w-16 h-16 mx-auto bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm" aria-hidden="true">📢</div>
                             <h3 class="text-xl font-bold text-stone-900 mb-3">Recruitment Force</h3>
                             <p class="text-stone-600 text-sm leading-relaxed mb-6">
                                 גישה ישירה ובלתי אמצעית לקהל ה-Hard-to-reach. אנחנו יודעים לגייס אותם מהטיקטוק והרחוב ולהפוך אותם ללומדים פעילים.
@@ -156,7 +197,7 @@
                     <div class="force-card bg-white p-8 rounded-2xl border border-stone-100 text-center relative overflow-hidden group">
                         <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="relative z-10 flex flex-col h-full">
-                            <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">🛡️</div>
+                            <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm" aria-hidden="true">🛡️</div>
                             <h3 class="text-xl font-bold text-stone-900 mb-3">The Shield</h3>
                             <p class="text-stone-600 text-sm leading-relaxed mb-4">
                                 הכשרה מקדימה לבניית חוסן מנטלי ומשמעת עצמית, המכינה את הנוער לתוכניות של סטארט-און.
@@ -171,7 +212,7 @@
                     <div class="force-card bg-white p-8 rounded-2xl border border-stone-100 text-center relative overflow-hidden group">
                         <div class="absolute inset-0 bg-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="relative z-10">
-                            <div class="w-16 h-16 mx-auto bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">🚀</div>
+                            <div class="w-16 h-16 mx-auto bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm" aria-hidden="true">🚀</div>
                             <h3 class="text-xl font-bold text-stone-900 mb-3">Media Impact</h3>
                             <p class="text-stone-600 text-sm leading-relaxed mb-6">
                                 כל סיפור הצלחה בתוכנית הופך לתוכן ויראלי המקדם את המותג המשותף ומעלה מודעות ציבורית.
@@ -266,7 +307,7 @@
                 <a href="mailto:hello@7ya.io?subject=%D7%A9%D7%99%D7%AA%D7%95%D7%A3%20%D7%A4%D7%A2%D7%95%D7%9C%D7%94%207YA.IO%20x%20STARTON" class="bg-stone-900 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-orange-600 transition-all transform hover:-translate-y-1">
                     תיאום פגישת היכרות
                 </a>
-                <a href="https://igor-vepretski-7-ya.replit.app/" target="_blank" rel="noopener noreferrer" class="bg-white text-stone-900 px-8 py-4 rounded-xl font-bold shadow-sm border border-stone-200 hover:border-blue-500 hover:text-blue-700 transition-all">
+                <a href="https://igor-vepretski-7-ya.replit.app/" target="_blank" rel="noopener noreferrer" aria-label="צפייה בגרסה החיה ב-Replit (נפתח בחלון חדש)" class="bg-white text-stone-900 px-8 py-4 rounded-xl font-bold shadow-sm border border-stone-200 hover:border-blue-500 hover:text-blue-700 transition-all">
                     צפייה בגרסה החיה
                 </a>
             </div>
@@ -277,91 +318,102 @@
 
     <!-- Scripts -->
     <script>
-        // Chart.js Configuration
+        // Chart.js Configuration with error handling
         
         // 1. Resilience Doughnut Chart (Small visual for the card)
-        const resilienceCanvas = document.getElementById('resilienceChart');
-        if (resilienceCanvas) {
-            const ctxResilience = resilienceCanvas.getContext('2d');
-            new Chart(ctxResilience, {
-            type: 'doughnut',
-            data: {
-                labels: ['חוסן מנטלי', 'כישורים טכניים'],
-                datasets: [{
-                    data: [65, 35],
-                    backgroundColor: ['#ea580c', '#eff6ff'], // Orange vs Light Blue
-                    borderWidth: 0,
-                    hoverOffset: 4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: { enabled: false }
-                },
-                cutout: '75%'
+        try {
+            const resilienceCanvas = document.getElementById('resilienceChart');
+            if (resilienceCanvas) {
+                const ctxResilience = resilienceCanvas.getContext('2d');
+                if (ctxResilience && typeof Chart !== 'undefined') {
+                    new Chart(ctxResilience, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['חוסן מנטלי', 'כישורים טכניים'],
+                            datasets: [{
+                                data: [65, 35],
+                                backgroundColor: ['#ea580c', '#eff6ff'], // Orange vs Light Blue
+                                borderWidth: 0,
+                                hoverOffset: 4
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: { display: false },
+                                tooltip: { enabled: false }
+                            },
+                            cutout: '75%'
+                        }
+                    });
+                }
             }
-        });
+        } catch (error) {
+            console.error('Error initializing resilience chart:', error);
         }
 
         // 2. Funnel Bar Chart (Main visual)
-        const funnelCanvas = document.getElementById('funnelChart');
-        if (funnelCanvas) {
-        const ctxFunnel = funnelCanvas.getContext('2d');
-        
-        new Chart(ctxFunnel, {
-            type: 'bar',
-            data: {
-                labels: ['חשיפה (7YA.IO Reach)', 'פניות (Leads)', 'הכשרה (The Shield)', 'בוגרים לסטארט-און'],
-                datasets: [{
-                    label: 'מספר משתתפים (משוער)',
-                    data: [50000, 2500, 400, 80], // Funnel logic numbers
-                    backgroundColor: [
-                        '#ea580c', // Orange-600 (High volume)
-                        '#f97316', // Orange-500
-                        '#3b82f6', // Blue-500 (Training)
-                        '#22c55e'  // Green-500 (Success)
-                    ],
-                    borderRadius: 12,
-                    barPercentage: 0.6
-                }]
-            },
-            options: {
-                indexAxis: 'y', // Horizontal funnel view
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        ticks: { display: false }
-                    },
-                    y: {
-                        grid: { display: false },
-                        ticks: { 
-                            font: { family: 'Heebo', weight: 'bold', size: 14 },
-                            color: '#44403c'
-                        }
-                    }
-                },
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#1c1917',
-                        padding: 12,
-                        titleFont: { family: 'Heebo', size: 14 },
-                        bodyFont: { family: 'Heebo', size: 14 },
-                        callbacks: {
-                            title: function(tooltipItems) {
-                                let label = tooltipItems[0].label;
-                                return Array.isArray(label) ? label.join(' ') : label;
+        try {
+            const funnelCanvas = document.getElementById('funnelChart');
+            if (funnelCanvas) {
+                const ctxFunnel = funnelCanvas.getContext('2d');
+                if (ctxFunnel && typeof Chart !== 'undefined') {
+                    new Chart(ctxFunnel, {
+                        type: 'bar',
+                        data: {
+                            labels: ['חשיפה (7YA.IO Reach)', 'פניות (Leads)', 'הכשרה (The Shield)', 'בוגרים לסטארט-און'],
+                            datasets: [{
+                                label: 'מספר משתתפים (משוער)',
+                                data: [50000, 2500, 400, 80], // Funnel logic numbers
+                                backgroundColor: [
+                                    '#ea580c', // Orange-600 (High volume)
+                                    '#f97316', // Orange-500
+                                    '#3b82f6', // Blue-500 (Training)
+                                    '#22c55e'  // Green-500 (Success)
+                                ],
+                                borderRadius: 12,
+                                barPercentage: 0.6
+                            }]
+                        },
+                        options: {
+                            indexAxis: 'y', // Horizontal funnel view
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                x: {
+                                    grid: { display: false },
+                                    ticks: { display: false }
+                                },
+                                y: {
+                                    grid: { display: false },
+                                    ticks: { 
+                                        font: { family: 'Heebo', weight: 'bold', size: 14 },
+                                        color: '#44403c'
+                                    }
+                                }
+                            },
+                            plugins: {
+                                legend: { display: false },
+                                tooltip: {
+                                    backgroundColor: '#1c1917',
+                                    padding: 12,
+                                    titleFont: { family: 'Heebo', size: 14 },
+                                    bodyFont: { family: 'Heebo', size: 14 },
+                                    callbacks: {
+                                        title: function(tooltipItems) {
+                                            let label = tooltipItems[0].label;
+                                            return Array.isArray(label) ? label.join(' ') : label;
+                                        }
+                                    }
+                                }
                             }
                         }
-                    }
+                    });
                 }
             }
-        });
+        } catch (error) {
+            console.error('Error initializing funnel chart:', error);
         }
     </script>
 </body>
