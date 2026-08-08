@@ -212,3 +212,33 @@ Dashboard rule: if any core KPI degrades for two consecutive weeks, trigger a fo
 - **Daily:** short blocker-driven standup.
 
 This blueprint should be treated as a living operating system: update monthly based on KPI movement, customer feedback, and regulatory constraints.
+
+
+## 11) 7ya.io Node/Express Runtime Management Baseline
+
+When operating the `rest-express` deployment, standardize around the following release workflow:
+
+- `npm run check` before every merge to enforce TypeScript correctness.
+- `npm run build` in CI to produce the deployable bundle (`dist/index.cjs`).
+- `npm run start` only in production environments with `NODE_ENV=production`.
+- `npm run db:push` only from controlled release pipelines (never ad-hoc from local machines).
+
+### 11.1 Service boundaries
+
+- Keep authentication/session dependencies (`passport`, `passport-local`, `express-session`, `connect-pg-simple`) in the API tier only.
+- Keep real-time dependencies (`socket.io`, `ws`) isolated behind explicit feature flags.
+- Keep outbound communications (`@azure/communication-email`, `resend`, `twilio`, `stripe`) behind provider adapters to avoid vendor lock-in.
+
+### 11.2 Dependency governance
+
+- Pin TypeScript major/minor versions for predictable builds (`typescript@5.6.x` baseline).
+- Review high-risk libraries monthly: auth, payments, database, and file/image processing (`sharp`).
+- Track OpenAI SDK upgrades in a dedicated changelog stream before promotion to production.
+- Require lockfile updates and a short risk note for any dependency upgrade touching security-critical paths.
+
+### 11.3 Production controls
+
+- Enforce staged rollout: development -> staging -> production with the same build artifact.
+- Add health probes for HTTP, database connectivity, and queue/websocket subsystems.
+- Record structured audit logs for auth events, billing events, and admin actions.
+- Maintain incident runbooks for degraded dependencies (Stripe, Twilio, email providers, and OpenAI API outages).
